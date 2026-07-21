@@ -1,0 +1,162 @@
+{
+    "project": {
+        "name": "AIS-Optimized Cumulative Rainfall Prediction System",
+        "optimization_algorithm": "Artificial Immune System - Clonal Selection",
+        "created_at": "2026-07-22T00:56:43.399375",
+        "output_prefix": "ais_"
+    },
+    "dataset": {
+        "path": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\daily_rainfall_ndb.csv",
+        "total_rows": 16,
+        "training_rows": 12,
+        "testing_rows": 4,
+        "districts": [
+            "Nandurbar"
+        ],
+        "start_date": "2025-09-01",
+        "end_date": "2025-09-16",
+        "target_column": "Progressive (m.m)"
+    },
+    "ais_settings": {
+        "population_size": 12,
+        "generations": 15,
+        "clone_factor": 4,
+        "elite_count": 4,
+        "random_replacements": 3,
+        "parameter_bounds": {
+            "n_estimators": [
+                100,
+                700
+            ],
+            "max_depth": [
+                2,
+                20
+            ],
+            "min_samples_split": [
+                2,
+                8
+            ],
+            "min_samples_leaf": [
+                1,
+                5
+            ],
+            "max_features_index": [
+                0,
+                3
+            ]
+        },
+        "best_parameters": {
+            "n_estimators": 111,
+            "max_depth": 3,
+            "min_samples_split": 2,
+            "min_samples_leaf": 1,
+            "max_features": "sqrt"
+        },
+        "best_cross_validation_rmse": 45.55736234740048,
+        "best_affinity": 0.021478880021987216
+    },
+    "baseline_random_forest": {
+        "training_metrics": {
+            "MAE": 3.253972222223529,
+            "MSE": 18.640480157421845,
+            "RMSE": 4.317462235784101,
+            "R2 Score": 0.9914631865520005,
+            "MAPE": 0.6289038834040848,
+            "Accuracy": 99.37109611659592
+        },
+        "testing_metrics": {
+            "MAE": 34.369083333333975,
+            "MSE": 1190.0009568611558,
+            "RMSE": 34.49639049032748,
+            "R2 Score": -83.47586543226647,
+            "MAPE": 6.022169359602834,
+            "Accuracy": 93.97783064039717
+        }
+    },
+    "ais_optimized_random_forest": {
+        "training_metrics": {
+            "MAE": 4.295343736593267,
+            "MSE": 33.15163087326496,
+            "RMSE": 5.757745294233235,
+            "R2 Score": 0.9848174893633669,
+            "MAPE": 0.8277915230528522,
+            "Accuracy": 99.17220847694715
+        },
+        "testing_metrics": {
+            "MAE": 38.81645860145838,
+            "MSE": 1517.0424364220341,
+            "RMSE": 38.94922895799138,
+            "R2 Score": -106.69190728405256,
+            "MAPE": 6.801497428721591,
+            "Accuracy": 93.19850257127841
+        },
+        "best_parameters": {
+            "n_estimators": 111,
+            "max_depth": 3,
+            "min_samples_split": 2,
+            "min_samples_leaf": 1,
+            "max_features": "sqrt"
+        }
+    },
+    "artificial_neural_network": {
+        "training_metrics": {
+            "MAE": 8.908147176106757,
+            "MSE": 169.20587981575443,
+            "RMSE": 13.007916044307574,
+            "R2 Score": 0.9225084859352941,
+            "MAPE": 1.698272665427109,
+            "Accuracy": 98.30172733457289
+        },
+        "testing_metrics": {
+            "MAE": 27.976635742187483,
+            "MSE": 787.3382091614596,
+            "RMSE": 28.059547558032,
+            "R2 Score": -54.89161607251158,
+            "MAPE": 4.906925703582626,
+            "Accuracy": 95.09307429641737
+        },
+        "epochs_completed": 281,
+        "validation_split": 0.2
+    },
+    "best_model": {
+        "name": "Artificial Neural Network",
+        "selection_method": "Lowest chronological testing RMSE",
+        "testing_metrics": {
+            "MAE": 27.976635742187483,
+            "MSE": 787.3382091614596,
+            "RMSE": 28.059547558032,
+            "R2 Score": -54.89161607251158,
+            "MAPE": 4.906925703582626,
+            "Accuracy": 95.09307429641737
+        }
+    },
+    "future_prediction": {
+        "days": 7,
+        "daily_rainfall_inputs": [
+            2.5,
+            0.0,
+            5.2,
+            10.0,
+            1.5,
+            0.0,
+            3.0
+        ]
+    },
+    "saved_files": {
+        "h5_model": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\ais_cumulative_rainfall_ann_model.h5",
+        "pkl_model": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\ais_cumulative_rainfall_model.pkl",
+        "json": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\ais_cumulative_rainfall_config.json",
+        "yaml": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\ais_cumulative_rainfall_config.yaml",
+        "accuracy_graph": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\ais_accuracy_graph.png",
+        "heatmap": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\ais_heatmap.png",
+        "comparison_graph": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\ais_comparison_graph.png",
+        "result_csv": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\ais_result.csv",
+        "result_graph": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\ais_result_graph.png",
+        "prediction_csv": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\ais_prediction.csv",
+        "prediction_graph": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\ais_prediction_graph.png",
+        "training_history_graph": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\ais_training_history_graph.png",
+        "optimization_history": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\ais_optimization_history.csv",
+        "optimization_graph": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\ais_optimization_graph.png"
+    },
+    "important_note": "The dataset contains only a small number of observations. Metrics and future predictions are experimental and should not be used as operational weather forecasts."
+}

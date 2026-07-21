@@ -1,0 +1,159 @@
+{
+    "project": {
+        "name": "CSA-Optimized Cumulative Rainfall Prediction System",
+        "optimization_algorithm": "Crow Search Algorithm",
+        "created_at": "2026-07-22T00:37:35.168361",
+        "output_prefix": "csa_"
+    },
+    "dataset": {
+        "path": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\daily_rainfall_ndb.csv",
+        "total_rows": 16,
+        "training_rows": 12,
+        "testing_rows": 4,
+        "districts": [
+            "Nandurbar"
+        ],
+        "start_date": "2025-09-01",
+        "end_date": "2025-09-16",
+        "target_column": "Progressive (m.m)"
+    },
+    "csa_settings": {
+        "population_size": 12,
+        "iterations": 15,
+        "flight_length": 2.0,
+        "awareness_probability": 0.15,
+        "lower_bounds": [
+            100.0,
+            2.0,
+            2.0,
+            1.0,
+            0.0
+        ],
+        "upper_bounds": [
+            700.0,
+            20.0,
+            8.0,
+            5.0,
+            3.0
+        ],
+        "best_position": [
+            100.0,
+            11.248096427366391,
+            2.294054524071691,
+            1.0,
+            0.1678635346984375
+        ],
+        "best_parameters": {
+            "n_estimators": 100,
+            "max_depth": 11,
+            "min_samples_split": 2,
+            "min_samples_leaf": 1,
+            "max_features": "sqrt"
+        },
+        "best_cross_validation_rmse": 45.99203300977212
+    },
+    "baseline_random_forest": {
+        "training_metrics": {
+            "MAE": 3.2539722222235477,
+            "MSE": 18.640480157421745,
+            "RMSE": 4.317462235784089,
+            "R2 Score": 0.9914631865520005,
+            "MAPE": 0.6289038834040882,
+            "Accuracy": 99.37109611659591
+        },
+        "testing_metrics": {
+            "MAE": 34.369083333333975,
+            "MSE": 1190.0009568611558,
+            "RMSE": 34.49639049032748,
+            "R2 Score": -83.47586543226647,
+            "MAPE": 6.022169359602834,
+            "Accuracy": 93.97783064039717
+        }
+    },
+    "csa_optimized_random_forest": {
+        "training_metrics": {
+            "MAE": 4.203583333332806,
+            "MSE": 32.56668824999499,
+            "RMSE": 5.706723074584485,
+            "R2 Score": 0.9850853765642581,
+            "MAPE": 0.8148418704769969,
+            "Accuracy": 99.185158129523
+        },
+        "testing_metrics": {
+            "MAE": 39.639249999999805,
+            "MSE": 1582.6831682499846,
+            "RMSE": 39.782950723268186,
+            "R2 Score": -111.3516158303377,
+            "MAPE": 6.945575426035694,
+            "Accuracy": 93.05442457396431
+        },
+        "best_parameters": {
+            "n_estimators": 100,
+            "max_depth": 11,
+            "min_samples_split": 2,
+            "min_samples_leaf": 1,
+            "max_features": "sqrt"
+        }
+    },
+    "artificial_neural_network": {
+        "training_metrics": {
+            "MAE": 3.13473307291666,
+            "MSE": 14.652179886301264,
+            "RMSE": 3.82781659517554,
+            "R2 Score": 0.9932897154343912,
+            "MAPE": 0.6113133483841585,
+            "Accuracy": 99.38868665161584
+        },
+        "testing_metrics": {
+            "MAE": 20.85870666503908,
+            "MSE": 760.6717987214403,
+            "RMSE": 27.58027916322531,
+            "R2 Score": -52.99861919137084,
+            "MAPE": 3.6689866610055932,
+            "Accuracy": 96.33101333899441
+        },
+        "epochs_completed": 174,
+        "validation_split": 0.2
+    },
+    "best_model": {
+        "name": "Artificial Neural Network",
+        "selection_method": "Lowest chronological test RMSE",
+        "testing_metrics": {
+            "MAE": 20.85870666503908,
+            "MSE": 760.6717987214403,
+            "RMSE": 27.58027916322531,
+            "R2 Score": -52.99861919137084,
+            "MAPE": 3.6689866610055932,
+            "Accuracy": 96.33101333899441
+        }
+    },
+    "future_prediction": {
+        "days": 7,
+        "daily_rainfall_inputs": [
+            2.5,
+            0.0,
+            5.2,
+            10.0,
+            1.5,
+            0.0,
+            3.0
+        ]
+    },
+    "saved_files": {
+        "h5_model": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\csa_cumulative_rainfall_ann_model.h5",
+        "pkl_model": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\csa_cumulative_rainfall_model.pkl",
+        "json": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\csa_cumulative_rainfall_config.json",
+        "yaml": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\csa_cumulative_rainfall_config.yaml",
+        "optimization_history_csv": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\csa_optimization_history.csv",
+        "optimization_graph": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\csa_optimization_graph.png",
+        "accuracy_graph": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\csa_accuracy_graph.png",
+        "heatmap": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\csa_heatmap.png",
+        "comparison_graph": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\csa_comparison_graph.png",
+        "result_csv": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\csa_result.csv",
+        "result_graph": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\csa_result_graph.png",
+        "prediction_csv": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\csa_prediction.csv",
+        "prediction_graph": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\csa_prediction_graph.png",
+        "training_history_graph": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\csa_training_history_graph.png"
+    },
+    "important_note": "The dataset contains only a small number of observations. The accuracy and future predictions are experimental and should not be treated as official weather forecasts."
+}

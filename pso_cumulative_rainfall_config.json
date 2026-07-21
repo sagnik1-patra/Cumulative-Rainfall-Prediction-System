@@ -1,0 +1,160 @@
+{
+    "project": {
+        "name": "PSO-Optimized Cumulative Rainfall Prediction System",
+        "optimization_algorithm": "Particle Swarm Optimization",
+        "created_at": "2026-07-22T01:07:28.958025",
+        "output_prefix": "pso_"
+    },
+    "dataset": {
+        "path": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\daily_rainfall_ndb.csv",
+        "total_rows": 16,
+        "training_rows": 12,
+        "testing_rows": 4,
+        "districts": [
+            "Nandurbar"
+        ],
+        "start_date": "2025-09-01",
+        "end_date": "2025-09-16",
+        "target_column": "Progressive (m.m)"
+    },
+    "pso_settings": {
+        "swarm_size": 12,
+        "iterations": 15,
+        "inertia": 0.7,
+        "cognitive_coefficient": 1.5,
+        "social_coefficient": 1.5,
+        "lower_bounds": [
+            100.0,
+            2.0,
+            2.0,
+            1.0,
+            0.0
+        ],
+        "upper_bounds": [
+            700.0,
+            20.0,
+            8.0,
+            5.0,
+            3.0
+        ],
+        "best_position": [
+            554.5564404991942,
+            3.0344700835635283,
+            2.0,
+            1.002893603836243,
+            1.2291033244330523
+        ],
+        "best_parameters": {
+            "n_estimators": 555,
+            "max_depth": 3,
+            "min_samples_split": 2,
+            "min_samples_leaf": 1,
+            "max_features": "log2"
+        },
+        "best_cross_validation_rmse": 47.21572456336174
+    },
+    "baseline_random_forest": {
+        "training_metrics": {
+            "MAE": 3.2539722222235334,
+            "MSE": 18.640480157421894,
+            "RMSE": 4.317462235784106,
+            "R2 Score": 0.9914631865520004,
+            "MAPE": 0.6289038834040859,
+            "Accuracy": 99.37109611659591
+        },
+        "testing_metrics": {
+            "MAE": 34.36908333333392,
+            "MSE": 1190.0009568611517,
+            "RMSE": 34.496390490327414,
+            "R2 Score": -83.47586543226618,
+            "MAPE": 6.022169359602824,
+            "Accuracy": 93.97783064039717
+        }
+    },
+    "pso_optimized_random_forest": {
+        "training_metrics": {
+            "MAE": 4.079034016160345,
+            "MSE": 26.406850512594357,
+            "RMSE": 5.138759627827941,
+            "R2 Score": 0.9879064082753538,
+            "MAPE": 0.7965946979760966,
+            "Accuracy": 99.20340530202391
+        },
+        "testing_metrics": {
+            "MAE": 34.876714124839,
+            "MSE": 1234.8538870286084,
+            "RMSE": 35.14048785985488,
+            "R2 Score": -86.65988816033445,
+            "MAPE": 6.109699313384595,
+            "Accuracy": 93.8903006866154
+        },
+        "best_parameters": {
+            "n_estimators": 555,
+            "max_depth": 3,
+            "min_samples_split": 2,
+            "min_samples_leaf": 1,
+            "max_features": "log2"
+        }
+    },
+    "artificial_neural_network": {
+        "training_metrics": {
+            "MAE": 1.0920827229817622,
+            "MSE": 2.082352107508694,
+            "RMSE": 1.443035726345226,
+            "R2 Score": 0.9990463415467454,
+            "MAPE": 0.21587616092476034,
+            "Accuracy": 99.78412383907524
+        },
+        "testing_metrics": {
+            "MAE": 10.96709899902342,
+            "MSE": 122.53421244669663,
+            "RMSE": 11.069517263489706,
+            "R2 Score": -7.698466654009277,
+            "MAPE": 1.9217584760416344,
+            "Accuracy": 98.07824152395837
+        },
+        "epochs_completed": 194,
+        "validation_split": 0.2
+    },
+    "best_model": {
+        "name": "Artificial Neural Network",
+        "selection_method": "Lowest chronological testing RMSE",
+        "testing_metrics": {
+            "MAE": 10.96709899902342,
+            "MSE": 122.53421244669663,
+            "RMSE": 11.069517263489706,
+            "R2 Score": -7.698466654009277,
+            "MAPE": 1.9217584760416344,
+            "Accuracy": 98.07824152395837
+        }
+    },
+    "future_prediction": {
+        "days": 7,
+        "daily_rainfall_inputs": [
+            2.5,
+            0.0,
+            5.2,
+            10.0,
+            1.5,
+            0.0,
+            3.0
+        ]
+    },
+    "saved_files": {
+        "h5_model": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\pso_cumulative_rainfall_ann_model.h5",
+        "pkl_model": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\pso_cumulative_rainfall_model.pkl",
+        "json": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\pso_cumulative_rainfall_config.json",
+        "yaml": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\pso_cumulative_rainfall_config.yaml",
+        "optimization_history_csv": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\pso_optimization_history.csv",
+        "optimization_graph": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\pso_optimization_graph.png",
+        "accuracy_graph": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\pso_accuracy_graph.png",
+        "heatmap": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\pso_heatmap.png",
+        "comparison_graph": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\pso_comparison_graph.png",
+        "result_csv": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\pso_result.csv",
+        "result_graph": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\pso_result_graph.png",
+        "prediction_csv": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\pso_prediction.csv",
+        "prediction_graph": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\pso_prediction_graph.png",
+        "training_history_graph": "C:\\Users\\NXTWAVE\\Downloads\\Cumulative Rainfall Prediction System\\pso_training_history_graph.png"
+    },
+    "important_note": "The dataset contains only a small number of observations. Accuracy values and future predictions are experimental and should not be treated as official weather forecasts."
+}

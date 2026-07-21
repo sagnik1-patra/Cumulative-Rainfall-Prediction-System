@@ -1,0 +1,8 @@
+District,Date,Expected Daily Rainfall (m.m),Baseline RF Prediction (m.m),AIS RF Prediction (m.m),ANN Prediction (m.m),Selected Model,Predicted Progressive Rainfall (m.m)
+Nandurbar,17-09-2025,2.5,576.9,576.9,576.9,Artificial Neural Network,576.9
+Nandurbar,18-09-2025,0.0,576.9,576.9,576.9,Artificial Neural Network,576.9
+Nandurbar,19-09-2025,5.2,576.9,576.9,576.9,Artificial Neural Network,576.9
+Nandurbar,20-09-2025,10.0,576.9,576.9,582.1303,Artificial Neural Network,582.1303
+Nandurbar,21-09-2025,1.5,576.9,576.9,585.3815,Artificial Neural Network,585.3815
+Nandurbar,22-09-2025,0.0,576.9,576.9,615.8629,Artificial Neural Network,615.8629
+Nandurbar,23-09-2025,3.0,576.9,576.9,615.8629,Artificial Neural Network,615.8629
