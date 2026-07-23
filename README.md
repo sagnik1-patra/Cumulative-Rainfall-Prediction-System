@@ -1,4 +1,4 @@
-# 🌧️ Smart Cumulative Rainfall Prediction System using Particle Swarm Optimization (PSO)
+# 🌧️ Smart Cumulative Rainfall Prediction System using Particle Swarm Optimization (PSO) 
 
 An intelligent Machine Learning-based rainfall prediction system that analyzes historical daily rainfall records and predicts future cumulative (progressive) rainfall using **Particle Swarm Optimization (PSO)**-optimized Random Forest and Artificial Neural Networks.
 
